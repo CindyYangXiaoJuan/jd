@@ -1,0 +1,629 @@
+.jdm {
+    width: 100%;
+    margin: 0 auto;
+}
+/*在移动端有些元素在手触摸后会出现背景颜色 需要去除此样式*/
+/*在iOS 11系统中input都会自带一个阴影 解决:-webkit-appearance: none;
+                                        border:none; background:transparent;
+*/
+* {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-appearance: none;
+}
+/*顶部搜索*/
+.jdm-search {
+    width: 100%;
+    height: 40px;
+    background-color: #c91523;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+.jdm-search .search-box {
+    width: 100%;
+    height: 100%;
+    padding-left: 75px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    position: relative;
+}
+.jdm-search .logo {
+    display: block;
+    position: absolute;
+    /*c3提供的一种方法calc方法用来计算属性的值  运算符的两边一定要有空格*/
+    top: calc((40px - 21px) / 2);
+    left: calc((75px - 56px) / 2);
+    width: 56px;
+    height: 21px;
+    background-position: -0 -109px;
+    background-image: url("../images/jd-sprites.png");
+    background-size: 200px 200px;
+}
+.jdm-search .search-box input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 0 25px;
+    margin-top: 5px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 30px;
+}
+.jdm-search .search-box i {
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/jd-sprites.png") -60px -109px;
+    background-size: 200px 200px;
+}
+.jdm-search .login {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+/*内容区域*/
+.jdm-content {
+    width: 100%;
+    background-color: #f6f6f6;
+}
+/*轮播图*/
+.jdm-content .carousel {
+    width: 100%;
+    box-sizing: border-box;
+}
+.jdm-content .carousel img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*导航*/
+.jdm-content .nav {
+    width: 100%;
+    background-color: #fff;
+}
+.jdm-content .nav ul {
+    width: 100%;
+    overflow: hidden;
+}
+.jdm-content .nav li {
+    float: left;
+    width: 25%;
+    font-size: 12px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    background-color: #fff;
+}
+.jdm-content .nav a {
+    display: block;
+    width: 100%;
+    color: #666;
+}
+.jdm-content .nav h5 {
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+.jdm-content .nav img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*秒杀*/
+.jdm-content .seckill {
+    width: 100%;
+    margin-top: 10px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/*秒杀标题*/
+.jdm-content .seckill .seckill_title {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/*-- 秒杀时间--*/
+.jdm-content .seckill_title i {
+    float: left;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 30px;
+    color: #c91523;
+}
+.jdm-content .seckill_title i:before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    width: 20px;
+    height: 25px;
+    background: url("../images/jd-sprites.png") -83px -108px;
+    background-size: 200px 200px;
+}
+.jdm-content .seckill .seckill_time span {
+    display: block;
+    float: left;
+    font-size: 13px;
+    color: #fff;
+    padding: 1px;
+    margin-top: 10px;
+    background-color: #000000;
+}
+.jdm-content .seckill .seckill_time span:nth-child(3n) {
+    background-color: #fff;
+    color: #000;
+}
+.jdm-content .seckill .seckill_time span:nth-child(3n+1) {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    margin-left: 3px;
+}
+.jdm-content .seckill .seckill_time span:nth-child(3n+2) {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    margin-right: 3px;
+}
+.jdm-content .seckill .seckill_more {
+    float: right;
+    position: relative;
+    padding-top: 10px;
+    padding-right: 20px;
+    font-size: 12px;
+    color: #666;
+}
+.jdm-content .seckill .seckill_more:after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 5px;
+    width: 13px;
+    height: 16px;
+    background: url("../images/jd-sprites.png") -182px -49px;
+    background-size: 200px 200px;
+}
+
+/*秒杀内容*/
+.jdm-content .seckill_content {
+    width: 100%;
+}
+.jdm-content .seckill_content ul {
+    width: 100%;
+}
+.jdm-content .seckill_content li {
+    float: left;
+    width: 33.333%;
+}
+.jdm-content .seckill_content a {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+.jdm-content .seckill_content s {
+    position: absolute;
+    bottom: 0px;
+    right: 24px;
+    display: block;
+    width: 35px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fdb60a;
+    color: #fff;
+    font-size: 12px;
+}
+.jdm-content .seckill_content img {
+    width: 100%;
+    vertical-align: middle;
+}
+.jdm-content .seckill_content .privce {
+    width: 100%;
+}
+.jdm-content .seckill_content .privce span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #c91523;
+}
+.jdm-content .seckill_content .privce span:last-child {
+    font-size: 12px;
+    color: #ccc;
+    text-decoration: line-through;
+}
+
+/*会场*/
+.jdm-content .metting {
+    width: 100%;
+    position: relative;
+}
+.jdm-content .metting img {
+    width: 100%;
+}
+.jdm-content .metting ul {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding-bottom: 8px;
+    box-sizing: border-box;
+}
+.jdm-content .metting li {
+    float: left;
+    width: 50%;
+}
+.jdm-content .metting li img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*热卖*/
+.jdm-content .hotsale {
+    width: 100%;
+    background-color: #fff;
+}
+.jdm-content .hotsale ul {
+    width: 100%;
+}
+.jdm-content .hotsale li {
+    width: 100%;
+    overflow: hidden;
+}
+.jdm-content .hotsale li a {
+    float: left;
+}
+.jdm-content .hotsale li:first-child a {
+    display: block;
+    width: 33.333%;
+    border-right: 1px solid #c0c0c0;
+    box-sizing: border-box;
+}
+.jdm-content .hotsale li:first-child a:last-child {
+    border: none;
+}
+.jdm-content .hotsale li:nth-child(2) a,
+.jdm-content .hotsale li:last-child a {
+     display: block;
+     width: 50%;
+ }
+.jdm-content .hotsale li a img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*广告*/
+.jdm-content .advert {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.jdm-content .advert img {
+    width: 100%;
+}
+
+/*特色超市*/
+.jdm-content .market {
+    width: 100%;
+    background-color: #fff;
+}
+.jdm-content .market h4,
+.jdm-content .theme h4,
+.jdm-content .brand h4
+{
+    color: #f25353;
+    font-size: 14px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.jdm-content .market ul {
+    width: 100%;
+}
+.jdm-content .market li {
+    width: 100%;
+    overflow: hidden;
+}
+.jdm-content .market a {
+    display: block;
+    width: 50%;
+    float: left;
+}
+.jdm-content .market img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*主题街*/
+.jdm-content .theme {
+    width: 100%;
+    background-color: #fff;
+}
+.jdm-content .theme ul {
+    width: 100%;
+}
+.jdm-content .theme li {
+    width: 100%;
+    overflow: hidden;
+}
+.jdm-content .theme li a {
+    float: left;
+}
+.jdm-content .theme li:first-child a {
+    display: block;
+    width: 50%;
+}
+.jdm-content .theme li:first-child a img {
+    width: 100%;
+    vertical-align: middle;
+}
+.jdm-content .theme li:first-child a:last-child img {
+    float: left;
+    width: 50%;
+}
+.jdm-content .theme li:last-child a {
+    display: block;
+    width: 25%;
+}
+.jdm-content .theme li:last-child img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*品牌推荐*/
+.jdm-content .brand {
+    width: 100%;
+    background-color: #fff;
+}
+.jdm-content .brand ul {
+    width: 100%;
+    overflow: hidden;
+}
+.jdm-content .brand li {
+    width: 30%;
+    float: left;
+}
+.jdm-content .brand li:first-child {
+    width: 40%;
+}
+.jdm-content .brand img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*猜你喜欢*/
+.jdm-content .guess {
+    width: 100%;
+    background-color: #fff;
+}
+.jdm-content .guess .guess_title {
+    width: 100%;
+    overflow: hidden;
+}
+.jdm-content .guess h5 {
+    float: left;
+    color: #c0c0c0;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: 400;
+}
+.jdm-content .guess .login {
+    width: 100%;
+}
+.jdm-content .guess .login p {
+    float: right;
+    color: #f25353;
+    padding: 10px 15px;
+    position: relative;
+}
+.jdm-content .guess .login p:before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -5px;
+    width: 18px;
+    height: 18px;
+    background: url("../images/icon-login.png") no-repeat;
+    background-size: 18px 18px;
+}
+.jdm-content .guess .login p:after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    right: 9px;
+    width: 4px;
+    height: 7px;
+    background: url("../images/icon-right.png") no-repeat;
+    background-size: 4px 7px;
+}
+.jdm-content .guess_items {
+    width: 100%;
+}
+.jdm-content .guess_items ul {
+    width: 100%;
+    overflow: hidden;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.jdm-content .guess_items li {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+.jdm-content .guess_items a {
+    width: 100%;
+    display: block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.jdm-content .guess_items li img {
+    width: 100%;
+    vertical-align: middle;
+}
+.jdm-content .guess_items li span {
+    margin: 8px 0;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    color: #666;
+    font-size: 14px;
+    line-height: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+.jdm-content .guess_items i {
+    display: block;
+    padding: 9px;
+    color: #f25353;
+    float: left;
+    box-sizing: border-box;
+}
+.jdm-content .guess_items e {
+    display: block;
+    float: right;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #666;
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 19px;
+}
+
+/*底部有*/
+.bottom {
+    width: 100%;
+    margin-bottom: 44px;
+}
+.bottom h4 {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #7F7F7F;
+    font-size: 14px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.bottom .bottom_login {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.bottom .bottom_login a {
+    float: left;
+    display: block;
+    width: 25%;
+    color: #848689;
+    font-size: 12px;
+    text-align: center;
+    padding-right: 5px;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.bottom .bottom_login a:last-child {
+    border: none;
+}
+.bottom ul {
+    width: 100%;
+    overflow: hidden;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.bottom ul li {
+    width: 33.333%;
+    float: left;
+    text-align: center;
+}
+.bottom ul li a{
+    display: block;
+    width: 37px;
+    margin: 0 auto;
+}
+.bottom ul li a:before {
+    content: "";
+    display: block;
+    text-align: center;
+    width: 37px;
+    height: 40px;
+    background: url("../images/jd-sprites.png");
+    background-position: 0 -63px;
+    background-size: 200px 200px;
+    padding-bottom: 5px;
+}
+.bottom ul li:first-child a:before {
+    background-position: 0 -63px;
+}
+.bottom ul li:nth-child(2) a:before {
+    background-position: -38px -64px;
+}
+.bottom ul li:last-child a:before {
+    background-position: -79px -63px;
+}
+.bottom .bottom_copyright {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.bottom .bottom_copyright p {
+    font-size: 13px;
+    color: #848689;
+    text-align: center;
+}
+
+
+    /*底部工具栏*/
+.jdm-toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    border-top: 1px solid #f6f6f6;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 10;
+}
+.jdm-toolbar ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.jdm-toolbar li {
+    flex: 1;
+    height: 100%;
+}
+.jdm-toolbar a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.jdm-toolbar img {
+    width: auto;
+    height: 44px;
+}
